@@ -1,4 +1,4 @@
 #!/usr/bin/with-contenv bash
 
 exec \
-s6-setuidgid abc /opt/tv/hlsproxy
+s6-setuidgid abc /opt/tv/hls-proxy
