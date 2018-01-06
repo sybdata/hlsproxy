@@ -3,11 +3,11 @@
 	"playlists": [
 		{
 			// A name of playlist to show in log
-			"name": "Torrent-TV",
+			"name": "TV",
 			// A type of uri. Could be 'link' or 'file'
 			"type": "link",
 			// A path to playlist.
-			"uri": "https://916.s50.online/tv/m3u1/as.kodi.m3u",
+			"uri": "https://.m3u",
 			// Cached local copy of a playlist. Used on second run when a playlist was downloaded before
 			"localCopy": ".tv.m3u8"
 		}
