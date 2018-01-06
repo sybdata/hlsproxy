@@ -12,7 +12,7 @@ RUN \
 	/opt/tv && \
 	
  # install hlsproxy
- wget -o - https://916.s50.online/tv/hls-proxy-3.6.4.linux-x64.zip -O hlsproxy.zip && \
+ wget -o - https://916.s50.online/tv/hls-proxy-4.1.2.linux-x64.zip -O hlsproxy.zip && \
  unzip hlsproxy.zip -d /opt/tv && \
 
 # cleanup
