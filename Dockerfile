@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.7
+FROM alpine:3.7
 			
 
 # install packages and symlink libs
@@ -18,9 +18,6 @@ RUN \
 # cleanup
  rm -rf \
 	/tmp/*
-
-# add local files
-COPY root/ /
 
 # ports and volumes
 EXPOSE 8060
