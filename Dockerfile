@@ -17,7 +17,7 @@ RUN apt-get update -y && \
  unzip hlsproxy.zip -d /opt/tv && \
 
 RUN chmod +x /opt/tv/hls-proxy
-
+ADD local.json /opt/tv/local.json
 
 # ports and volumes
 EXPOSE 8060
