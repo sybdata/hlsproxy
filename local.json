@@ -7,9 +7,9 @@
 			// A type of uri. Could be 'link' or 'file'
 			"type": "link",
 			// A path to playlist.
-			"uri": "http://asproxy.net/",
+			"uri": "https://916.s50.online/tv/m3u1/as.kodi.m3u",
 			// Cached local copy of a playlist. Used on second run when a playlist was downloaded before
-			"localCopy": "./torrent-tv.m3u8"
+			"localCopy": ".tv.m3u8"
 		}
 		// ,{
 		// 	name: 'Custom',
@@ -41,8 +41,8 @@
 	},
 	"SERVER": {
 		"protocol": "http",
-		"address": "10.0.0.1",
-		"port": 80
+		"address": "192.168.178.92",
+		"port": 8060
 	},
 	"clients": {
 		"10.0.0.2": "Test client"
