@@ -5,6 +5,7 @@ FROM debian:stable-slim
 ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /tmp
 RUN apt-get update -y && \
+    apt-get install -y \
     wget \
     unzip \
     nano \
