@@ -1,0 +1,162 @@
+{
+	// An array of objects. Note, that all channels will be merged into one playlist
+	"playlists": [
+		{
+			// A name of playlist to show in log
+			"name": "Torrent-TV",
+			// A type of uri. Could be 'link' or 'file'
+			"type": "link",
+			// A path to playlist.
+			"uri": "http://asproxy.net/",
+			// Cached local copy of a playlist. Used on second run when a playlist was downloaded before
+			"localCopy": "./torrent-tv.m3u8"
+		}
+		// ,{
+		// 	name: 'Custom',
+		// 	type: 'file',
+		// 	uri: './custom.m3u',
+		// }
+	],
+	"epg": {
+		 //An URLs of EPG sources.
+		// You can open several sources at once.
+		// Just remember - a comma has to be at the end of every string except the last one
+		"tvGuideUrl": [
+//			"http://epg.in.ua/epg/tvprogram_ua_ru.gz",
+//			"http://www.teleguide.info/download/new3/xmltv.xml.gz",
+//			"http://api.torrent-tv.ru/ttv.xmltv.xml.gz",
+//			"https://iptvx.one/epg/epg.xml.gz"
+		],
+		// How many passed days to keep an EPG. 4 means to keep up to 4 days ago
+		"historyDays": 4,
+		// Local cache of built EPG
+		"filename": "./epg.xml.gz",
+		 // Update at 20:00 every day
+		"updateAt": "0 0 8,23 * * *",
+		// If true - do nothing.
+		// If false - change a begining of a program which starts at 00:00 to 00:01. Bug of LazyIPTV
+		"isProgramStartTimeCanBeAtMidnight": false,
+		// Directory where proxy keeps a cache of EPG. Can be cleared safely at the moment when proxy doesn't download EPG.
+		"cacheDir": "./epg-cache"
+	},
+	"SERVER": {
+		"protocol": "http",
+		"address": "10.0.0.1",
+		"port": 80
+	},
+	"clients": {
+		"10.0.0.2": "Test client"
+	},
+	"RECORDING": {
+		"storeDir": "./recording",
+		"topDirDateFormat": "YYYY-MM-DD",
+		"timeFormat":"HHːmmːss"
+	},
+	// User can configure his own playlist url
+	"playlistPath": "/playlist.m3u8",
+	// If true - playlistPath url is available to access by any domain even external.
+	// Useful for OTTPlayer, SS IPTV etc
+	"isPlaylistAvailableFromOutside": false,
+	// A directory for stream caching when isCacheInMemory set to false
+	"CACHE_DIR": "./cache",
+	// When set to true, proxy keeps streams in the RAM, when it is false - CACHE_DIR used for storing stream files
+	"isCacheInMemory": true,
+	// Useragent string is used to fetch a playlist
+	"userAgent": "Mozilla/5.0 (Linux; Android 4.4.3; en-US; Nexus 6 Build/LMY47Z) MXPlayer/1.7.40",
+	// Time multiplier between requests for remote HLS playlist
+	// Default - wait x1.5 of chunk time
+	"fetchIntervalMultiplier": 1.5,
+	// How many video chunks to cache locally
+	"chunksToCache": 10,
+	// How many chunks from start to hide from a client
+	"safeChunkSeq": 2,
+	// How many chunks are visible to client to fetch
+	"chunksForClient": 10,
+	// How many chunks to fill before it will be available for client on start.
+	// Also used for new client connection to begin
+	"fastStartChunks": 2,
+	// When playlist is short - less than 4 chunks, it increases "fastStartChunks" to this value
+	"fastStartChunksWhenPlaylistIsShort": 4,
+	// Period in ms. If no request from client during this period, then server stops fetching
+	"streamTimeout": 100000,
+	// Tha same as above but for VLC for PC
+//	"streamTimeoutForVLC": 100000,
+	// How many requests to perform for the same chunk before retire
+	"getTsChunkRetries": 3,
+	// Stall timeout for request. If during this period no data received - request is aborted
+	"httpResponseStallTimeout": 4500,
+	// Before this period a speed of download is not measured and request can not be aborted.
+	"minDownloadPeriod": 6000,
+	// Miminal chunk download speed by default if not presents in m3u8 in bytes
+	"minDownloadSpeed": 104857.6,
+	// Multiplier of speed check
+	"speedCheckMultiplier": 0.5,
+	// 5 Mbit/sec
+	// How many simultaneous downloads is possible
+	"downloadSlotsAvailable": 2,
+	// Default text encoding
+	"encoding": "utf-8",
+	// If epg does not recognize time shift correctly and set it inversed - just try to play with that
+	"inverseEpgTimeShift": true,
+	// VLC user agent detect
+//	"vlcPlayerMatch": "^VLC/i",
+	// Usualy all sequences are sorted. So it should not impact
+	"forceSortChunks": true,
+	// For streams with variable quality - set your max speed in kylobites
+	// By default 200Mbit
+	"preferableBandwidth": 200000,
+	// auto|msk|spb|ams|nsk|isr
+	// Describes available servers. Allows to switch between them in /status page
+	"torrentTv": {
+		"regions": [
+			{
+				"id": "auto",
+				"name": "Automatic"
+			},
+			{
+				"id": "msk",
+				"name": "Moscow"
+			},
+			{
+				"id": "spb",
+				"name": "St.Petersburg"
+			},
+			{
+				"id": "ams",
+				"name": "Amsterdam"
+			}
+		]
+	},
+	"LOG": {
+		"INFO": "===",
+		"IN": "==>",
+		"OUT": "<==",
+		"appenders": {
+			"console": {
+				"type": "console"
+			}
+//			"file": {
+//				"type": "file",
+//				"filename": "logs/hsl-proxy.log",
+//				"maxLogSize": 500000,
+//				"backups": 9
+//			}
+		},
+		"categories": {
+			"default": {
+				"appenders": ["console"],
+				"level": "info"
+			}
+		}
+	},
+	// Cron schedule for playlist fetching intervals. By default every two hours
+	"Cron": {
+		"name": "Reload playlist every three hours",
+		"schedule": "0 0 */3 * * *"
+	},
+	// Available formats at https://momentjs.com/
+	// Used for output in /status page
+	"fullDateFormat": "HH:mm:ss, [<span style='white-space: nowrap;'>]DD-MM-YYYY[</span>]",
+	"durationFormat": "D [days] HH:mm:ss",
+	"trimDuration": false
+}
