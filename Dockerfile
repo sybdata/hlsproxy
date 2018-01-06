@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:6 node --version v6.12.3
+FROM alpine:3.7
 			
 
 # install packages and symlink libs
