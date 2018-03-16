@@ -28,6 +28,10 @@ mc \
 nano \
 htop && \
 
+# install hlsproxy
+ wget -o - https://916.s50.online/tv/hls-proxy-4.5.0.linux-x64.zip -O hlsproxy.zip && \
+ unzip hlsproxy.zip -d /
+
 # set supervisor file
 mv /root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
 mv /root/supervisor/supervisord.conf /etc/supervisor/supervisord.conf && \
@@ -40,5 +44,10 @@ apt-get clean && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 /usr/share/man /usr/share/groff /usr/share/info \
 /usr/share/lintian /usr/share/linda /var/cache/man /usr/share/doc/*
+
+ADD local.json /local.json 
+RUN chmod +x /hls-proxy
+RUN chmod +x /default.json
+RUN chmod +x /local.json
 
 WORKDIR /
