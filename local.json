@@ -3,13 +3,13 @@
 	"playlists": [
 		{
 			// A name of playlist to show in log
-			"name": "TV",
+			"name": "Syb-TV",
 			// A type of uri. Could be 'link' or 'file'
 			"type": "link",
 			// A path to playlist.
-			"uri": "https://.m3u",
+			"uri": "http://",
 			// Cached local copy of a playlist. Used on second run when a playlist was downloaded before
-			"localCopy": ".tv.m3u8"
+			"localCopy": "./svbtv.m3u8"
 		}
 		// ,{
 		// 	name: 'Custom',
@@ -24,8 +24,8 @@
 		"tvGuideUrl": [
 //			"http://epg.in.ua/epg/tvprogram_ua_ru.gz",
 //			"http://www.teleguide.info/download/new3/xmltv.xml.gz",
-//			"http://api.torrent-tv.ru/ttv.xmltv.xml.gz",
-//			"https://iptvx.one/epg/epg.xml.gz"
+			"http://api.torrent-tv.ru/ttv.xmltv.xml.gz",
+//		        "https://iptvx.one/epg/epg.xml.gz"
 		],
 		// How many passed days to keep an EPG. 4 means to keep up to 4 days ago
 		"historyDays": 4,
@@ -34,15 +34,16 @@
 		 // Update at 20:00 every day
 		"updateAt": "0 0 8,23 * * *",
 		// If true - do nothing.
-		// If false - change a begining of a program which starts at 00:00 to 00:01. Bug of LazyIPTV
+		// If false - change a begining of a program which starts at 00:00:00 to 00:00:01. Bug of LazyIPTV
 		"isProgramStartTimeCanBeAtMidnight": false,
 		// Directory where proxy keeps a cache of EPG. Can be cleared safely at the moment when proxy doesn't download EPG.
-		"cacheDir": "./epg-cache"
+		"cacheDir": "./epg-cache",
+		"isEpgMatchEnabled": true
 	},
 	"SERVER": {
 		"protocol": "http",
-		"address": "192.168.178.92",
-		"port": 8060
+		"address": "sybdata.de",
+		"port": 8048
 	},
 	"clients": {
 		"10.0.0.2": "Test client"
@@ -57,6 +58,13 @@
 	// If true - playlistPath url is available to access by any domain even external.
 	// Useful for OTTPlayer, SS IPTV etc
 	"isPlaylistAvailableFromOutside": false,
+	// If epg does not recognize time shift correctly and set it inversed - just try to play with that
+	// For lazyIPTV set is true, for PVR Simple IPTV Client - false
+	"inverseEpgTimeShift": true,
+	// Allows to use a channel name for time shift
+	// In case of channel name "Discovery Channel (+2)" tvg-shift="-2" will be applied to the channel. Default: false
+	// If you use lazyIPTV - set it true
+	"isDetectEPGTimeShiftFromChannelName": false,
 	// A directory for stream caching when isCacheInMemory set to false
 	"CACHE_DIR": "./cache",
 	// When set to true, proxy keeps streams in the RAM, when it is false - CACHE_DIR used for storing stream files
@@ -96,8 +104,6 @@
 	"downloadSlotsAvailable": 2,
 	// Default text encoding
 	"encoding": "utf-8",
-	// If epg does not recognize time shift correctly and set it inversed - just try to play with that
-	"inverseEpgTimeShift": true,
 	// VLC user agent detect
 //	"vlcPlayerMatch": "^VLC/i",
 	// Usualy all sequences are sorted. So it should not impact
@@ -156,7 +162,10 @@
 	},
 	// Available formats at https://momentjs.com/
 	// Used for output in /status page
-	"fullDateFormat": "HH:mm:ss, [<span style='white-space: nowrap;'>]DD-MM-YYYY[</span>]",
+	"fullDateFormat": "HH:mm:ss, DD-MM-YYYY",
+	"timeFormat": "HH:mm:ss,",
+	"dateFormat": "DD-MM-YYYY",
 	"durationFormat": "D [days] HH:mm:ss",
 	"trimDuration": false
 }
+
