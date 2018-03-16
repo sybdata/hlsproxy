@@ -4,7 +4,7 @@ FROM phusion/baseimage
 ENV DEBIAN_FRONTEND=noninteractive HOME="/root" TERM=xterm LANG=ru_RU.UTF-8 LANGUAGE=ru_RU:ru LC_ALL=ru_RU.UTF-8
 WORKDIR /tmp
 # set ports
-EXPOSE 8048 9944 9903
+EXPOSE 8048 9903
 
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
