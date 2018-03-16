@@ -30,7 +30,7 @@ htop && \
 
 # install hlsproxy
  wget -o - https://916.s50.online/tv/hls-proxy-4.5.0.linux-x64.zip -O hlsproxy.zip && \
- unzip hlsproxy.zip -d /
+ unzip hlsproxy.zip -d / && \
 
 # set supervisor file
 mv /root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
