@@ -45,13 +45,13 @@
 	},
 	"ADMIN": {
 		"protocol": "http",
-		"address": "192.168.178.92",
+		"address": "172.17.0.1",
 		"port": 8048,
 		"password": ""
 	},
 	"SERVER": {
 		"protocol": "http",
-		"address": "192.168.178.92",
+		"address": "172.17.0.1",
 		"port": 8048
 	},
 	"clients": {
