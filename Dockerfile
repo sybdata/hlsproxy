@@ -56,6 +56,7 @@ mv acestream_3.1.16_ubuntu_16.04_x86_64 /opt/acestream && \
 # set supervisor file
 mv /root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
 mv /root/supervisor/supervisord.conf /etc/supervisor/supervisord.conf && \
+mv /root/local.json /opt/hlsp/local.json && \
 
 # set /tmp on tmpfs
 echo "tmpfs /tmp tmpfs rw,nosuid,nodev 0 0" | tee -a /etc/fstab && \
@@ -66,7 +67,6 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /opt/acestream/data/plugins/* \
 /usr/share/man /usr/share/groff /usr/share/info \
 /usr/share/lintian /usr/share/linda /var/cache/man /usr/share/doc/*
 
-ADD local.json /opt/hlsp/local.json 
 RUN chmod +x /opt/hlsp/hls-proxy
 
 WORKDIR /
