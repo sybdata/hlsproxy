@@ -108,11 +108,11 @@
 	// if http error 404 is occured - use this value instead of "getTsChunkRetries"
 	"retriesForError404": 3,
 	// if http error 404 is occured - use this value instead of "delayBeforeRetryIfFailed"
-	"delayForError404": 5000,
+	"delayForError404": 6000,
 	// How many requests to perform for the same chunk before retire
-	"getPlaylistRetries": 3,
+	"getPlaylistRetries": 5,
 	// Stall timeout for request. If during this period no data received - request is aborted
-	"httpResponseStallTimeout": 4500,
+	"httpResponseStallTimeout": 5500,
 	// Before this period a speed of download is not measured and request can not be aborted.
 	"minDownloadPeriod": 6000,
 	// Miminal chunk download speed by default if not presents in m3u8 in bytes
