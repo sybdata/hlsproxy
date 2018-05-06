@@ -3,7 +3,7 @@
 	"playlists": [
 		{
 			// A name of playlist to show in log
-			"name": "Torrent-TV",
+			"name": "TTV",
 			// A type of uri. Could be 'link' or 'file'
 			"type": "link",
 			// A path to playlist.
@@ -27,7 +27,7 @@
 		"tvGuideUrl": [
 //			"http://epg.in.ua/epg/tvprogram_ua_ru.gz",
 //			"http://www.teleguide.info/download/new3/xmltv.xml.gz",
-   			"http://api.torrent-tv.ru/ttv.xmltv.xml.gz",
+			"http://api.torrent-tv.ru/ttv.xmltv.xml.gz",
 //			"https://iptvx.one/epg/epg.xml.gz"
 		],
 		// How many passed days to keep an EPG. 4 means to keep up to 4 days ago
@@ -43,15 +43,16 @@
 		"cacheDir": "./epg-cache",
 		"isEpgMatchEnabled": true
 	},
+	// ADMIN section is not implemented yet. There is no accepted decision for this kind of a solution
 	"ADMIN": {
 		"protocol": "http",
-		"address": "172.17.0.1",
+		"address": "192.168.178.92",
 		"port": 8048,
 		"password": ""
 	},
 	"SERVER": {
 		"protocol": "http",
-		"address": "172.17.0.1",
+		"address": "192.168.178.92",
 		"port": 8048
 	},
 	"clients": {
@@ -155,7 +156,8 @@
 				"id": "ams",
 				"name": "Amsterdam"
 			}
-		]
+		],
+		"overrideRegion": "spb"
 	},
 	"LOG": {
 		"INFO": "===",
