@@ -1,4 +1,4 @@
-# AceStream + HLS Proxy &#169; http://www.hls-proxy.com
+# AceStream + HLS Proxy&#169;&#174; http://www.hls-proxy.com
 
 
 ![logo3](https://user-images.githubusercontent.com/24189833/37561035-99591946-2a44-11e8-8914-1e52c0d6c6ec.png)
