@@ -54,7 +54,7 @@ tar -zxvf acestream_3.1.16_ubuntu_16.04_x86_64.tar.gz && \
 mv acestream_3.1.16_ubuntu_16.04_x86_64 /opt/acestream && \
 
 # install hlsproxy
- wget -o - https://sybdata.de/files/public-docs/hls-proxy-4.7.3.linux-x64.zip -O hlsproxy.zip && \
+ wget -o - https://sybdata.de/files/public-docs/hls-proxy-4.8.1.linux-x64.zip -O hlsproxy.zip && \
  unzip hlsproxy.zip -d /opt/hlsp/ && \
 
 # set supervisor file
