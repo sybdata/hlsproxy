@@ -3,13 +3,13 @@
 	"playlists": [
 		{
 			// A name of playlist to show in log
-			"name": "TTV",
+			"name": "ToTV",
 			// A type of uri. Could be 'link' or 'file'
 			"type": "link",
 			// A path to playlist.
-			"uri": "http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.HD.player.m3u",
+			"uri": "http://asproxy.net/",
 			// Cached local copy of a playlist. Used on second run when a playlist was downloaded before
-			"localCopy": "./tv.m3u8",
+			"localCopy": "./totv.m3u8",
 			"isUseLocalAceStreamMediaProxy": true,
 			"aceStreamMediaProxyURL": "http://127.0.0.1:6878"
 		}
@@ -41,7 +41,12 @@
 		"isProgramStartTimeCanBeAtMidnight": false,
 		// Directory where proxy keeps a cache of EPG. Can be cleared safely at the moment when proxy doesn't download EPG.
 		"cacheDir": "./epg-cache",
-		"isEpgMatchEnabled": true
+		// true enables channel mapping between playlist and epg by channel name. Covers more than 95% of available channels.
+		// Sets own tvg-id in playlist
+		"isEpgMatchEnabled": true,
+		// Optionally a user can configure his own url for clients to fetch epg
+		// By default epg is available at /epg
+		"epgUrlForClient": "/epg.xml.gz"
 	},
 	// ADMIN section is not implemented yet. There is no accepted decision for this kind of a solution
 	"ADMIN": {
@@ -50,11 +55,14 @@
 		"port": 8048,
 		"password": ""
 	},
+	// Sets an url where HLS-proxyy will be available
+	// By default, http://10.0.0.1/ is a playlist url for players. For browsers it shows a HTML rich page with channels and EPG
 	"SERVER": {
 		"protocol": "http",
 		"address": "192.168.178.92",
 		"port": 8048
 	},
+	// username and password are still not in use
 	"clients": {
 		"10.0.0.2": {
 			"id": "test",
@@ -63,6 +71,7 @@
 			"password": "test"
 		}
 	},
+	// Used for storing recorded streams
 	"RECORDING": {
 		"storeDir": "./recording",
 		"topDirDateFormat": "YYYY-MM-DD",
@@ -109,7 +118,7 @@
 	// if http error 404 is occured - use this value instead of "getTsChunkRetries"
 	"retriesForError404": 3,
 	// if http error 404 is occured - use this value instead of "delayBeforeRetryIfFailed"
-	"delayForError404": 6000,
+	"delayForError404": 5000,
 	// How many requests to perform for the same chunk before retire
 	"getPlaylistRetries": 5,
 	// Stall timeout for request. If during this period no data received - request is aborted
@@ -156,8 +165,9 @@
 				"id": "ams",
 				"name": "Amsterdam"
 			}
-		],
-		"overrideRegion": "spb"
+		]
+		// default region on proxy start
+		//,"overrideRegion": "spb"
 	},
 	"LOG": {
 		"INFO": "===",
@@ -194,3 +204,4 @@
 	"durationFormat": "D [days] HH:mm:ss",
 	"trimDuration": false
 }
+
