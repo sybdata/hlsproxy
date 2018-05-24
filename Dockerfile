@@ -60,8 +60,7 @@ mv acestream_3.1.16_ubuntu_16.04_x86_64 /opt/acestream && \
 # set supervisor file
 mv /root/supervisord.conf /etc/supervisor/conf.d/supervisord.conf && \
 mv /root/supervisor/supervisord.conf /etc/supervisor/supervisord.conf && \
-mv /root/local.json /opt/hlsp/local.json && \
-mv /root/favicon.ico /opt/hlsp/favicon.ico && \
+mv /root/default.json /opt/hlsp/default.json && \
 
 # set /tmp on tmpfs
 echo "tmpfs /tmp tmpfs rw,nosuid,nodev 0 0" | tee -a /etc/fstab && \
