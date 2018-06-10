@@ -31,9 +31,7 @@ wget http://launchpadlibrarian.net/229774470/python-m2crypto_0.22.6~rc4-1ubuntu1
 dpkg -i python-m2crypto_0.22.6~rc4-1ubuntu1_amd64.deb && \
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
 python get-pip.py && \
-pip install --upgrade psutil && \
 pip install --user https://github.com/rogerbinns/apsw/releases/download/3.23.1-r1/apsw-3.23.1-r1.zip --global-option=fetch --global-option=--version --global-option=3.23.1 --global-option=--all --global-option=build --global-option=--enable-all-extensions && \
-pip install setuptools cffi 'cython>=0.27' git+git://github.com/gevent/gevent.git#egg=gevent && \
 apt-get purge git python-dev gcc build-essential -y && \
 apt-get autoremove -y && \
 
