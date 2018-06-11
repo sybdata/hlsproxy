@@ -27,8 +27,8 @@
 		"tvGuideUrl": [
 //			"http://epg.in.ua/epg/tvprogram_ua_ru.gz",
 //			"http://www.teleguide.info/download/new3/xmltv.xml.gz",
-//			"http://api.torrent-tv.ru/ttv.xmltv.xml.gz",
-			"https://iptvx.one/epg/epg.xml.gz"
+			"http://api.torrent-tv.ru/ttv.xmltv.xml.gz",
+//			"https://iptvx.one/epg/epg.xml.gz"
 		],
 		// How many passed days to keep an EPG. 4 means to keep up to 4 days ago
 		"historyDays": 2,
