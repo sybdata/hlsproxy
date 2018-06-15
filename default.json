@@ -7,7 +7,7 @@
 			// A type of uri. Could be 'link' or 'file'
 			"type": "link",
 			// A path to playlist.
-			"uri": "http://pomoyka.lib.emergate.net/trash/ttv-list/ttv.HD.player.m3u",
+			"uri": "http://127.0.0.1:6878/playlist/get?format=acestream",
 			// Cached local copy of a playlist. Used on second run when a playlist was downloaded before
 			"localCopy": "./totv.m3u8",
 			"isUseLocalAceStreamMediaProxy": true,
