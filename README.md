@@ -1,5 +1,20 @@
 # AceStream + HLS Proxy&#174; http://www.hls-proxy.com
+### usage
+```
+docker run \
+--privileged \
+-d \
+-e PUID=0 \
+-e PGID=0 \
+--net=host \
+--name=ace86 \
+-e TZ=Europe/Berlin \
+sybdata/ace86u18 bash -c "./start.sh 600"
+```
+ #### где:
 
+* 600 - Время очистки кеша acestream в секундах
+* TZ='timezone'
 
 ![logo3](https://user-images.githubusercontent.com/24189833/37561035-99591946-2a44-11e8-8914-1e52c0d6c6ec.png)
 Proxy предназначен главным образом для тех, у кого часто буферят каналы.
