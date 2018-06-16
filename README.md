@@ -6,10 +6,9 @@ docker run \
 -d \
 -e PUID=0 \
 -e PGID=0 \
---net=host \
 --name=ace86 \
 -e TZ=Europe/Berlin \
-sybdata/ace86u18 bash -c "./start.sh 600"
+sybdata/hlsproxy bash -c "./start.sh 600"
 ```
  #### где:
 
