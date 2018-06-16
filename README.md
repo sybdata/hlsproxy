@@ -1,4 +1,5 @@
 # AceStream + HLS Proxy&#174; http://www.hls-proxy.com
+![logo-text-test](https://user-images.githubusercontent.com/24189833/36645710-3deca456-1a6d-11e8-8bf0-84f078703d8d.png) (v3.1.31) 
 ### usage
 ```
 docker run \
