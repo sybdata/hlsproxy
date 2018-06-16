@@ -51,7 +51,7 @@
 	// ADMIN section is not implemented yet. There is no accepted decision for this kind of a solution
 	"ADMIN": {
 		"protocol": "http",
-		"address": "192.168.178.92",
+		"address": "192.168.178.23",
 		"port": 8048,
 		"password": ""
 	},
@@ -59,7 +59,7 @@
 	// By default, http://10.0.0.1/ is a playlist url for players. For browsers it shows a HTML rich page with channels and EPG
 	"SERVER": {
 		"protocol": "http",
-		"address": "192.168.178.92",
+		"address": "192.168.178.23",
 		"port": 8048
 	},
 	// username and password are still not in use
