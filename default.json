@@ -7,7 +7,7 @@
 			// A type of uri. Could be 'link' or 'file'
 			"type": "link",
 			// A path to playlist.
-			"uri": "http://127.0.0.1:6878/playlist/get?format=acestream",
+			"uri": "http://asplaylist.net/t/BwAQgt1GJFut17lf%2Fvq0LwLm4hzAyENLhCDsz9PVTP2FMl%2FdPeR5PGCWXiRMSkHK?cat&mm=off",
 			// Cached local copy of a playlist. Used on second run when a playlist was downloaded before
 			"localCopy": "./totv.m3u8",
 			"isUseLocalAceStreamMediaProxy": true,
