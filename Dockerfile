@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-ENV DEBIAN_FRONTEND=noninteractive LANG=ru_RU.UTF-8 LANGUAGE=ru_RU:ru LC_ALL=ru_RU.UTF-8
+ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /tmp
 
 # set ports
@@ -14,10 +14,7 @@ wget \
 mc \
 nano \
 tzdata \
-locales \
 htop && \
-# Set the locale
-locale-gen ru_RU.UTF-8 && \
 apt-get autoremove -y && \
 
 #acestream
