@@ -3,15 +3,15 @@
 	"playlists": [
 		{
 			// A name of playlist to show in log
-			"name": "Torrent-TV",
+			"name": "ToTV",
 			// A type of uri. Could be 'link' or 'file'
 			"type": "link",
 			// A path to playlist.
 			"uri": "http://asproxy.net/",
 			// Cached local copy of a playlist. Used on second run when a playlist was downloaded before
-			"localCopy": "./torrent-tv.m3u8",
+			"localCopy": "./totv.m3u8",
 			"isUseLocalAceStreamMediaProxy": true,
-			"aceStreamMediaProxyURL": "http://10.0.0.1:6878"
+			"aceStreamMediaProxyURL": "http://127.0.0.1:6878"
 		}
 		// ,
 		// {
@@ -24,8 +24,8 @@
 	// By default, http://10.0.0.1/ is a playlist url for players. For browsers it shows a HTML rich page with channels and EPG
 	"SERVER": {
 		"protocol": "http",
-		"address": "10.0.0.1",
-		"port": 80
+		"address": "192.168.178.23",
+		"port": 8048
 	},
 	"epg": {
 		 //An URLs of EPG sources.
@@ -34,8 +34,8 @@
 		"tvGuideUrl": [
 //			"http://epg.in.ua/epg/tvprogram_ua_ru.gz",
 //			"http://www.teleguide.info/download/new3/xmltv.xml.gz",
-//			"http://api.torrent-tv.ru/ttv.xmltv.xml.gz",
-			"https://iptvx.one/epg/epg.xml.gz"
+			"http://api.torrent-tv.ru/ttv.xmltv.xml.gz",
+//			"https://iptvx.one/epg/epg.xml.gz"
 		],
 		// How many passed days to keep an EPG. 4 means to keep up to 4 days ago
 		"historyDays": 2,
@@ -226,7 +226,7 @@
 	},
 	// If you want to know which country a client from then set to true
 	// It takes a bit of memory so if you use embedded systens, check twice
-	"isCountryDetectionEnabled": false,
+	"isCountryDetectionEnabled": true,
 	// Default value for clients without "isAdultAllowed" property
 	"isAdultAllowed": true
 }
