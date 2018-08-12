@@ -27,7 +27,7 @@ find /opt/acestream/androidfs/system -type f -exec chmod 644 {} \; && \
 chmod 755 /opt/acestream/androidfs/system/bin/* /opt/acestream/androidfs/acestream.engine/python/bin/python && \
 
 # install hlsproxy
-wget -o - https://sybdata.de/files/public-docs/hls-proxy-4.8.1.linux-x64.zip -O hlsproxy.zip && \
+wget -o - https://sybdata.de/files/public-docs/hls-proxy-5.0.2.linux-x64.zip -O hlsproxy.zip && \
 unzip hlsproxy.zip -d /opt/hlsp/ && \
 
 # set /tmp on tmpfs
