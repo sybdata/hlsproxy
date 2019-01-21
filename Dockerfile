@@ -22,7 +22,7 @@ apt-get autoremove -y && \
 mkdir -p /opt/acestream/ && \
 wget -o - https://sybdata.de/data/acestream/acestream_3.1.33.1_x86_wbUI.tar.gz && \
 tar -zxvf acestream_3.1.33.1_x86_wbUI.tar.gz && \
-mv androidfs /opt/acestream/androidfs && \
+mv acestream.engine/ /opt/ && \
 
 # install hlsproxy
 wget -o - https://www.hls-proxy.com/downloads/5.3.0/hls-proxy-5.3.0.linux-x64.zip -O hlsproxy.zip && \
