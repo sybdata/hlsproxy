@@ -1,6 +1,6 @@
 #!/bin/sh
 
-python3 /opt/HTTPAceProxy-master/acehttp.py >/dev/null 2>&1 &
+/opt/acestream.engine/start_acestream_chroot.sh >/dev/null 2>&1 &
 
 /opt/hlsp/hls-proxy >/dev/null 2>&1 &
 
