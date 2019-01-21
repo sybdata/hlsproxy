@@ -34,7 +34,7 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
 /usr/share/man /usr/share/groff /usr/share/info \
 /usr/share/lintian /usr/share/linda /var/cache/man /usr/share/doc/*
 COPY root/ /
-RUN chmod +x /start.sh
+RUN chmod +x /opt/acestream.engine/start.sh
 RUN chmod +x /opt/hlsp/hls-proxy
 CMD ["/opt/acestream.engine/start.sh"]
 
