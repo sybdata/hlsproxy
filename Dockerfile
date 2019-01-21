@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /tmp
 
 # set ports
-EXPOSE 8624 62064 6878 8048
+EXPOSE 8624 62064 6870 8048
 
 RUN \
 apt-get update && apt-get upgrade -y && \
