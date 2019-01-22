@@ -8,7 +8,6 @@ EXPOSE 8628 62077 6874 8085
 
 RUN \
 apt-get update && apt-get upgrade -y && \
-apt-get update -y && \
 apt-get install -y \
 wget \
 mc \
