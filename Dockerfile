@@ -1,10 +1,10 @@
-FROM ubuntu:18.04
+FROM ubuntu:19.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /tmp
 
 # set ports
-EXPOSE 8624 62064 6870 8048
+EXPOSE 8628 62077 6874 8085
 
 RUN \
 apt-get update && apt-get upgrade -y && \
