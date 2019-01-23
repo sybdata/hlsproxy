@@ -1,0 +1,7 @@
+
+<?xml version="1.0"?>
+<AvProxy Ver="1">
+<Input Url="http://178.254.30.118:8101/channel/bayc.m3u8?q=1548249807476">
+<Output Name="test" Desc="test" AES128=0/>
+</Input>
+</AvProxy>
