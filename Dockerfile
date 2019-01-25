@@ -24,7 +24,7 @@ tar -zxvf acestream_3.1.33.1_x86_wbUI.tar.gz && \
 mv acestream.engine/ /opt/ && \
 
 # install hlsproxy
-wget -o - https://www.hls-proxy.com/downloads/5.3.0/hls-proxy-5.3.0.linux-x64.zip -O hlsproxy.zip && \
+wget -o - https://www.hls-proxy.com/downloads/5.3.2/hls-proxy-5.3.2.linux-x64.zip -O hlsproxy.zip && \
 unzip hlsproxy.zip -d /opt/hlsp/ && \
 
 # clean up
